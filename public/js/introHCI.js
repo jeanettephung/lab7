@@ -9,5 +9,12 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	// your code here
+		// your code here
+		$(".likeBtn").click(projectClick);
+}
+
+function projectClick(e) {
+		console.log("clicked");
+    e.preventDefault();
+    ga("send", "event", "like", "click");
 }
